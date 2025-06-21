@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruslan+Display&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    font-family: "Ruslan Display", sans-serif;
+}
+.bg{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(0deg,#a47ee9,#A9DBEC);
+    z-index: -99999;
+}
+    /* background-image: linear-gradient(90deg,#E97EA4,#A9DBEC); */
+header{
+    width: 100%;
+    height: 100vh;
+}
+html{
+    font-size: 10px;
+}
+.nav{
+    width: 100%;
+    height: 75px;
+    background-color: #a9beec;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+.checkbox{
+    width: 50px;
+    height: 50px;
+    padding-top: 7.5px;
+    opacity: 0;
+    position: fixed;
+    margin-top: 0px;
+    z-index: 99999;
+}
+.checkbox__div{
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: 150px;
+    border: 5px solid white;
+}
+.checkbox__lines{
+    margin-top: 9px;
+}
+.checkbox__line{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-left: 7.5px;
+    margin-top: 8.5px;
+    transition: 1s;
+}
+.checkbox:checked ~ .checkbox__lines .checkbox__line:nth-of-type(1){
+    width: 50px;
+    margin-left: 0px;
+    margin-top: 22.5px;
+    transform: rotate(45deg);
+}
+.checkbox:checked ~ .checkbox__lines .checkbox__line:nth-of-type(2){
+    background: none;
+}
+.checkbox:checked ~ .checkbox__lines .checkbox__line:nth-of-type(3){
+    width: 50px;
+    margin-left: 0px;
+    margin-top: -17.5px;
+    transform: rotate(-45deg);
+}
+.menu__div{
+    position: absolute;
+    z-index: -5;
+    width: 100vw;
+    height: 0px;
+    background-image: linear-gradient(90deg, #96acdc, #99aedc);
+    left: 0px;
+    top: 75px;
+    transition: 1s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.menu__a{
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.checkbox:checked ~ .menu__div{
+    width: 100vw;
+    height: 150px;
+    top: 75px;
+    background-image: linear-gradient(90deg, #96acdc, #99aedc);
+}
+.header__about{
+    height: 275vh;
+}
+.header__pattern{
+    background-image: url(image/Pattern.png);
+    width: 80%;
+    height: 800px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 100px;
+}
+.header__div{
+    display: flex;
+    justify-content: space-around;
+}
+.header__h{
+    width: 750px;
+    margin-top: 225px;
+    position: relative;
+}
+.header__h2{
+    font-size: 10rem;
+    color: #6E005A;
+    text-align: center;
+}
+.header__h3{
+    font-size: 5rem;
+    color: #6E005A;
+    text-align: center;
+}
+.header__img{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    scale: 0.3;
+}
+.main{
+    width: 100%;
+}
+.achievements{
+    width: 650px;
+    height: 90px;
+    background-color: rgba(190, 80, 133, 0.26);
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.achievements__h2{
+    text-align: center;
+    line-height: 90px;
+    color: white;
+    font-size: 5rem;
+}
+.cards-one{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.cards-two{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.cards-three{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.cards-four{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.card{
+    background-color: white;
+    width: 450px;
+    height: 650px;
+    border-radius: 50px;
+    transition: 1s;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.card__img{
+    height: 550px;
+    width: 100%;
+    border-radius: 50px 50px 0px 0px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cards-one .card:nth-of-type(1) .card__img{
+    background-image: url("image/Сакура.jpg");
+}
+.cards-one .card:nth-of-type(2) .card__img{
+    background-image: url("image/Генератор.jpg");
+}
+.cards-two .card:nth-of-type(1) .card__img{
+    background-image: url("image/Анекдотбот.jpg");
+}
+.cards-two .card:nth-of-type(2) .card__img{
+    background-image: url("image/ГенераторСлучайныхпобедителей.png");
+}
+.cards-three .card:nth-of-type(1) .card__img{
+    background-image: url("image/ПогодаБот.jpg");
+    background-size: cover;
+    background-position: left;
+}
+.cards-three .card:nth-of-type(2) .card__img{
+    background-image: url("image/Дизайнинтерфейсатгприложения.png");
+    background-size: cover;
+    background-position: left;
+}
+.cards-four .card:nth-of-type(1) .card__img{
+    background-image: url("image/Ботпопрограммированию.jpg");
+    background-size: cover;
+    background-position: left;
+}
+.card__h3{
+    height: 100px;
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(150, 77, 112, 0.65);
+    border-radius: 0px 0px 50px 50px;
+    text-align: center;
+    line-height: 100px;
+}
+.card:hover{
+    scale: 1.1;
+}
+footer{
+    height: 50vh;
+    width: 100%;
+    margin-top: 300px;
+    margin-bottom: 250px;
+}
+.footer__h2{
+    text-align: center;
+    font-size: 5rem;
+    color: white;
+}
+.footer__div{
+    background-image: url(image/Pattern.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+    border-radius: 50px;
+    margin-top: 150px;
+}
+.footer__p{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-top: 75px;
+}
+.footer__logo__p{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-top: 550px;
+}
+.footer__container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer__logo{
+    background-image: url(image/logo.png);
+    background-position: center;
+    height: 500px;
+}
+.how-use{
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+}
+.how__header{
+    height: 300px;
+}
+.how__h2{
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(190, 80, 133, 0.26);
+    width: 650px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50px;
+}
+.how-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+.how-card:nth-of-type(1) .how-card-img-one{
+    background-image: url(image/Сакура.jpg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.how-card:nth-of-type(1) .how-card-img-two{
+    background-image: url(image/ГенераторСлучайныхпобедителей.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.how-card:nth-of-type(2) .how-card-img-one{
+    background-image: url(image/Генератор.jpg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.how-card:nth-of-type(2) .how-card-img-two{
+    background-image: url(image/Анекдотбот.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.how-card:nth-of-type(3) .how-card-img-one{
+    background-image: url(image/ПогодаБот.jpg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.how-card:nth-of-type(3) .how-card-img-two{
+    background-image: url(image/Дизайнинтерфейсатгприложения.png);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.how-card:nth-of-type(4) .how-card-img-one{
+    background-image: url(image/Ботпопрограммированию.jpg);
+}
+.how-card:nth-of-type(4) .how-card-img-two{
+    background: none;
+}
+.how-card-text-four{
+    background: none;
+    width: 400px;
+    height: 300px;
+}
+.how-card-text{
+    width: 400px;
+    height: 300px;
+    background-image: url(image/Pattern.png);
+    border-radius: 50px;
+    transition: 1s;
+}
+.how-card-text:hover{
+    scale: 1.1;
+}
+.how-card-h2{
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 100px;
+}
+.how-card-p{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+.how-card-img{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 50px;
+    transition: 1s;
+}
+.how-card-img:hover{
+    scale: 1.1;
+}
+.about-us{
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+}
+.about__h1{
+    color: white;
+    font-size: 10rem;
+    text-align: center;
+}
+.about__imgs{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+.about__imgs:nth-of-type(2n){
+    flex-direction: row-reverse;
+}
+.about__imgs:nth-of-type(4){
+    margin-bottom: 50px;
+}
+.about__img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+.about__imgs:nth-of-type(1) .about__img{
+    background-image: url(image/ПортертСофии.png);
+}
+.about__imgs:nth-of-type(2) .about__img{
+    background-image: url(image/ПортертМарка.png);
+}
+.about__imgs:nth-of-type(3) .about__img{
+    background-image: url(image/ПортетИвана.jpg);
+}
+.about__imgs:nth-of-type(4) .about__img{
+    background-image: url(image/Портретплатона.png);
+}
+.about__div{
+    width: 800px;
+    height: 300px;
+    background-image: url(image/Pattern.png);
+    border-radius: 50px;
+    transition: 1s;
+}
+.about__h2{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 100px;
+}
+.about__p{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
